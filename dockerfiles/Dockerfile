@@ -1,4 +1,4 @@
-# paddleflow/ubuntu:test20230426
+# paddleflow/ubuntu:test20230426_1
 FROM ubuntu:latest
 # unsupport latest in our pr-test cluster, it will be update to latest once cluster updated
 
