@@ -1,4 +1,4 @@
-# paddleflow/ubuntu:test20230426_2
+# paddleflow/ubuntu:latest
 FROM ubuntu:latest
 # unsupport latest in our pr-test cluster, it will be update to latest once cluster updated
 
@@ -10,3 +10,9 @@ RUN apt-get update && \
     apt-get install -y glusterfs-server --no-install-recommends && \
     apt-get install nfs-kernel-server -y --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
+RUN apt-get install meson -y --no-install-recommends && \
+    apt-get install ninja-build -y --no-install-recommends && \
+    apt install python3-pip -y --no-install-recommends && \
+    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple pytest --no-install-recommends && \
+    apt-get install pkg-config -y --no-install-recommends && \
+    apt-get install udev -y --no-install-recommends
