@@ -9,10 +9,6 @@ RUN apt-get update && \
     apt-get install -y tzdata --no-install-recommends  && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     apt-get install -y glusterfs-server --no-install-recommends && \
     apt-get install nfs-kernel-server -y --no-install-recommends && \
+    apt-get install -y fuse --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
-RUN apt-get install meson -y --no-install-recommends && \
-    apt-get install ninja-build -y --no-install-recommends && \
-    apt install python3-pip -y --no-install-recommends && \
-    pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple pytest --no-install-recommends && \
-    apt-get install pkg-config -y --no-install-recommends && \
-    apt-get install udev -y --no-install-recommends
+
