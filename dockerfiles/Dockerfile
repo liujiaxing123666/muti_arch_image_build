@@ -1,5 +1,5 @@
 # paddleflow/ubuntu:latest
-FROM ubuntu:latest
+FROM ubuntu:18.04
 # unsupport latest in our pr-test cluster, it will be update to latest once cluster updated
 
 ENV DEBIAN_FRONTEND=noninteractive
